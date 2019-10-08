@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A26BD3ED-4AD4-4E1F-A01B-E77EE8AD28B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>WindowsApplicationFATEC_BOLA_DENTRO</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApplicationFATEC_BOLA_DENTRO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApplicationFATEC_BOLA_DENTRO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Área de Trabalho\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controle\alteracao\classe_alteracao_aluno.vb" />
+    <Compile Include="Controle\cadastro\classe_cad_ajudante_quadra.vb" />
+    <Compile Include="Controle\cadastro\classe_cad_aluno.vb" />
+    <Compile Include="Controle\cadastro\classe_cad_arbitros.vb" />
+    <Compile Include="Controle\cadastro\classe_cad_boleiro.vb" />
+    <Compile Include="Controle\cadastro\classe_cad_encordoador.vb" />
+    <Compile Include="Controle\cadastro\classe_cad_jogador.vb" />
+    <Compile Include="Controle\consulta\classe_consulta_ajudante_quadra.vb" />
+    <Compile Include="Controle\consulta\classe_consulta_aluno.vb" />
+    <Compile Include="Controle\consulta\classe_consulta_arbitros.vb" />
+    <Compile Include="Controle\consulta\classe_consulta_boleiro.vb" />
+    <Compile Include="Controle\consulta\classe_consulta_encordoador.vb" />
+    <Compile Include="Controle\consulta\classe_consulta_jogador.vb" />
+    <Compile Include="Controle\exclusao\classe_excluir_aluno.vb" />
+    <Compile Include="Controle\exclusao\classe_exclusao_ajudante_quadra.vb" />
+    <Compile Include="Controle\exclusao\classe_exclusao_arbitro.vb" />
+    <Compile Include="Controle\exclusao\classe_exclusao_boleiro.vb" />
+    <Compile Include="Controle\exclusao\classe_exclusao_encordoador.vb" />
+    <Compile Include="Modelo\conexaoBD_MySql\bola_dentroDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bola_dentroDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\conexaoBD_MySql\bola_dentroDataSet.vb">
+      <DependentUpon>bola_dentroDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_ajudante_quadra.Designer.vb">
+      <DependentUpon>Form_BD_ajudante_quadra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_ajudante_quadra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_aluno.Designer.vb">
+      <DependentUpon>Form_BD_aluno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_aluno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_arbitros.Designer.vb">
+      <DependentUpon>Form_BD_arbitros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_arbitros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_boleiro.Designer.vb">
+      <DependentUpon>Form_BD_boleiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_boleiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_encordoador.Designer.vb">
+      <DependentUpon>Form_BD_encordoador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_encordoador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_jogador.Designer.vb">
+      <DependentUpon>Form_BD_jogador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Tabelas\Form_BD_jogador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\alteracoes\Form_alteracao_aluno.Designer.vb">
+      <DependentUpon>Form_alteracao_aluno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\alteracoes\Form_alteracao_aluno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\cadastro\Form_cadastro_aluno.Designer.vb">
+      <DependentUpon>Form_cadastro_aluno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\cadastro\Form_cadastro_aluno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\cadastro\Form_cadastro_jogo.Designer.vb">
+      <DependentUpon>Form_cadastro_jogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\cadastro\Form_cadastro_jogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_ajudante_quadra.Designer.vb">
+      <DependentUpon>Form_consulta_ajudante_quadra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_ajudante_quadra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_alunos.Designer.vb">
+      <DependentUpon>Form_consulta_alunos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_alunos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_arbitros.Designer.vb">
+      <DependentUpon>Form_consulta_arbitros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_arbitros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_boleiro.Designer.vb">
+      <DependentUpon>Form_consulta_boleiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_boleiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_encordoador.Designer.vb">
+      <DependentUpon>Form_consulta_encordoador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_encordoador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_jogadores.Designer.vb">
+      <DependentUpon>Form_consulta_jogadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\consultas\Form_consulta_jogadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modelo\Tabelas\Form_BD_ajudante_quadra.resx">
+      <DependentUpon>Form_BD_ajudante_quadra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelo\Tabelas\Form_BD_aluno.resx">
+      <DependentUpon>Form_BD_aluno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelo\Tabelas\Form_BD_arbitros.resx">
+      <DependentUpon>Form_BD_arbitros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelo\Tabelas\Form_BD_boleiro.resx">
+      <DependentUpon>Form_BD_boleiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelo\Tabelas\Form_BD_encordoador.resx">
+      <DependentUpon>Form_BD_encordoador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelo\Tabelas\Form_BD_jogador.resx">
+      <DependentUpon>Form_BD_jogador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\alteracoes\Form_alteracao_aluno.resx">
+      <DependentUpon>Form_alteracao_aluno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\cadastro\Form_cadastro_aluno.resx">
+      <DependentUpon>Form_cadastro_aluno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\cadastro\Form_cadastro_jogo.resx">
+      <DependentUpon>Form_cadastro_jogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\consultas\Form_consulta_ajudante_quadra.resx">
+      <DependentUpon>Form_consulta_ajudante_quadra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\consultas\Form_consulta_alunos.resx">
+      <DependentUpon>Form_consulta_alunos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\consultas\Form_consulta_arbitros.resx">
+      <DependentUpon>Form_consulta_arbitros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\consultas\Form_consulta_boleiro.resx">
+      <DependentUpon>Form_consulta_boleiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\consultas\Form_consulta_encordoador.resx">
+      <DependentUpon>Form_consulta_encordoador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\consultas\Form_consulta_jogadores.resx">
+      <DependentUpon>Form_consulta_jogadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\conexaoBD_MySql\bola_dentroDataSet.xsc">
+      <DependentUpon>bola_dentroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Modelo\conexaoBD_MySql\bola_dentroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bola_dentroDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\conexaoBD_MySql\bola_dentroDataSet.xss">
+      <DependentUpon>bola_dentroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Modelo\conexaoBD_MySql\App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="My Project\MySql.Data.DLL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

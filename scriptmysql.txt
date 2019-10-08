@@ -1,0 +1,85 @@
+CREATE DATABASE boladentro;
+
+CREATE TABLE tb_aluno
+alunoID int NOT NULL AUTO_INCREMENT,
+nome_aluno varchar(50),
+data_nascimento varchar(8),
+mae_aluno varchar(50),
+pai_aluno varchar(50),
+rg_aluno varchar (9),
+data_ingresso varchar (8),
+exame_medico_aluno varchar(8),
+PRIMARY KEY (nome_aluno)
+);
+
+
+CREATE TABLE tb_ajudante_quadra
+(
+cod_ajudante_quadra NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (cod_ajudante_quadra)
+);
+
+ALTER TABLE tb_ajudante_quadra ADD CONSTRAINT fk_aluno FOREIGN KEY ( alunoID ) REFERENCES tb_aluno ( alunoID ) ;
+
+CREATE TABLE tb_boleiro
+(
+cod_boleiro NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (cod_boleiro)
+);
+
+ALTER TABLE tb_boleiro ADD CONSTRAINT fk_aluno FOREIGN KEY ( alunoID ) REFERENCES tb_aluno ( alunoID ) ;
+ 
+CREATE TABLE tb_encordoador
+(
+cod_encordoador NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (cod_encordoador)
+);
+
+ALTER TABLE tb_encordoador ADD CONSTRAINT fk_aluno FOREIGN KEY ( alunoID ) REFERENCES tb_aluno ( alunoID ) ;
+
+CREATE TABLE tb_arbitros
+(
+cod_arbitros NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (cod_arbitros)
+);
+
+ALTER TABLE tb_arbitros ADD CONSTRAINT fk_aluno FOREIGN KEY ( alunoID ) REFERENCES tb_aluno ( alunoID ) ;
+
+
+CREATE TABLE tb_jogador
+jogadorID int NOT NULL AUTO_INCREMENT,
+categoria varchar(1),
+data_entrada varchar(8),
+data_saida varchar(8),
+pontuacao int,
+PRIMARY KEY (jogadorID)
+);
+
+ALTER TABLE tb_jogador ADD CONSTRAINT fk_aluno FOREIGN KEY ( alunoID ) REFERENCES tb_aluno ( alunoID ) ;
+
+CREATE TABLE tb_jogo
+jogoID int NOT NULL AUTO_INCREMENT,
+data_partida varchar(8),
+cod_vencedor int NOT NULL,
+cod_perdedor int NOT NULL,
+pontuacao_perdedor int NOT NULL,
+PRIMARY KEY (jogoID)
+);
+
+ALTER TABLE tb_jogo ADD CONSTRAINT fk_jogador FOREIGN KEY ( jogadorID ) REFERENCES tb_jogador ( jogadorID ) ;
+
+CREATE TABLE tb_funcionarios
+funcionarioID int NOT NULL AUTO_INCREMENT,
+func_nome varchar(50),
+func_nascimento varchar (50),
+func_rg varchar (9),
+func_cpf int, 
+func_cargo varchar (30),
+func_telefone varchar (13),
+PRIMARY KEY (funcionariosID)
+);
+
+
+
+
+
